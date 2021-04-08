@@ -1,4 +1,4 @@
-# TwoDTurbulence-EulerLimit/
+# 2D Euler
 
 Study of the behavior of Euler equations at long times. The code is written in [Julia](https://julialang.org) and utilizes the Julia package [GeophysicalFlows.jl](http://github.com/FourierFlows/GeophysicalFlows.jl).
 
