@@ -17,4 +17,7 @@ deps/src/
 docs/build/
 docs/site/
 
+*.mp4
+*.gif
+*.jld2
 *.DS_Store
