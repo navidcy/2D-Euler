@@ -24,23 +24,23 @@ dev = CPU()     # Device (CPU/GPU)
 #
 # First, we pick some numerical and physical parameters for our model.
 
-α = 0.5                      # aspect ratio parameter α = Ly / Lx
-ny, Ly  = 256, 2π            # grid resolution and domain length
-nx, Lx  = Int(256 / α), Ly / α
+α = 1                      # aspect ratio parameter α = Ly / Lx
+ny, Ly  = 2*2*256, 2π            # grid resolution and domain length
+nx, Lx  = Int(2*2*256 / α), Ly / α
 
 
 ## Then we pick the time-stepper parameters
-	 dt = 1e-2  # timestep
-nsubs = 50    # number of steps between each plot
+	 dt =0.5*1e-3  # timestep
+nsubs = 1000    # number of steps between each plot
  
- ν = 1e-3
+ ν = 0.2*1e-4
  
-initial_data_wavenumber = 6.0
+initial_data_wavenumber = 2.0
 initial_data_bandwidth = 0.5
 
 k₀ = initial_data_wavenumber
 
- tfinal = 2.0 / (ν * k₀^2)
+ tfinal = 600.0 #/ (ν * k₀^2)
  nsteps = Int(round(tfinal / dt))
 
  grid = TwoDGrid(dev, nx, Lx, ny, Ly)

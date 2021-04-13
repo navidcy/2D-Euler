@@ -8,7 +8,7 @@ using Plots
 using Printf
 using FFTW: irfft
 
-filename = "./data/kolmogorovflow.jld2"
+filename = "./data/euler_longtime_3.jld2"
 
 withoutgif(path) = (length(path)>3 && path[end-3:end] == ".gif") ? path[1:end-4] : path
 
@@ -30,7 +30,7 @@ function uniquegifpath(path)
   return path
 end
 
-moviegif_filename = "./movies/kolmogorov_onlyflow.gif"
+moviegif_filename = "./movies/2deuler.gif"
 moviegif_filename = uniquegifpath(moviegif_filename)
 moviemp4_filename = moviegif_filename[1:end-4]*".mp4"
 
@@ -42,7 +42,7 @@ function plot_output(x, y, ζ, ψ, t, k₀, ν, t_final)
     p_ζ = heatmap(x, y, ζ',
              aspectratio = 1,
                        c = :balance,
-                    #clim = (-2, 2),
+                    clim = (-2, 2),
                    xlims = (x[1], x[end]),
                    ylims = (y[1], y[end]),
                   xlabel = "x",
