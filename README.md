@@ -4,7 +4,9 @@ Study of the behavior of Euler equations at long times. The code is written in [
 
 ## Installation
 
-First you need to [install Julia](https://julialang.org/downloads/). Then clone the repository, e.g.,
+First you need to [install Julia](https://julialang.org/downloads/). We suggest using Julia version 1.6 or later.
+
+Then clone the repository, e.g.,
 
 ```
 git clone https://github.com/navidcy/2D-Euler/.git
