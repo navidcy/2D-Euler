@@ -9,10 +9,10 @@ First you need to [install Julia](https://julialang.org/downloads/). We suggest 
 Then clone the repository, e.g.,
 
 ```
-git clone https://github.com/navidcy/2D-Euler/.git
+git clone https://github.com/navidcy/2D-Euler.git
 ```
 
-Enter the directory you've cloned the repository, e.g., 
+Enter the directory you've cloned the repository into, e.g., 
 
 ```
 cd 2D-Euler/
